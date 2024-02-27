@@ -63,8 +63,10 @@ if ($review_result->num_rows > 0) {
     while ($review_row = $review_result->fetch_assoc()) {
         $rating = $review_row['ratings'];
         $review = $review_row['review'];
+        $email = $review_row['email'];
         echo "<p><strong>Rating:</strong> $rating</p>";
         echo "<p><strong>Review:</strong> $review</p>";
+        echo "<p><strong>reviewer:</strong> $email</p>";
     }
 } else {
     echo "<p>No previous data available.</p>";

@@ -29,8 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Update the restaurant's rating and number of reviews in the database
         $updateSql = "UPDATE searchfood SET ratings = $newRating, num_reviews = num_reviews + 1 WHERE restaurantid = $restaurantid";
         if ($conn->query($updateSql) === TRUE) {
+            $email =($_SESSION["email"]);
             // Insert the new review into the database
-            $insertSql = "INSERT INTO reviews (id, ratings, review) VALUES ($restaurantid, $rating, '$review')";
+            $insertSql = "INSERT INTO reviews (id, ratings, review,email) VALUES ($restaurantid, $rating, '$review','$email')";
             if ($conn->query($insertSql) === TRUE) {
                 echo "Review submitted successfully";?>
                  <h2>Thank you for your time</h2>
