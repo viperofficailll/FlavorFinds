@@ -1,0 +1,109 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, ul, li, form, input, button {
+    background-color: black ;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Navigation styles */
+.nav {
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Search bar styles */
+.search-bar {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    background-color: green;
+    padding: 8px;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.search-bar h1 {
+    margin-bottom: 5px;
+}
+/* Search button styles */
+.search-bar input[type="submit"] {
+    padding: 12px 24px; /* Increase padding for larger button */
+    font-size: 16px; 
+    background-color: green;/* Increase font size */
+}
+
+.search-bar input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+/* Recommended food styles */
+.recommendedfood {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: rgb(5, 4, 4);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommendedfood table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recommendedfood table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* User button styles */
+.user-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
