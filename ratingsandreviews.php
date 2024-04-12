@@ -31,7 +31,7 @@
             $restaurantrating = $row1['ratings'];
             $restaurantName = $row1['restaurant'];
             echo "<p><h3>Restaurant you are going to rate:</h3>  <h1>$restaurantName</p></h1>   ";
-            echo "<p><h3>Current rating:</h3>  <h1>$restaurantrating</p></h1>   ";
+            echo "<p><h3>Current rating:</h3>  <h1>$restaurantrating</p></h1><h1>IMAGE</h1>   ";
         }
     } else {
         header("Location:login");

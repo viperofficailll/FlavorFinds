@@ -17,6 +17,8 @@
     <h1> add restaurant</h1></button>
 <button class="addlocation" type="submit" onclick="window.location.href = 'adminaddlocation.php'">
     <h1> Add Location</h1></button>
+<button class="addfood" type="submit" onclick="window.location.href = 'addfood.php'">
+    <h1> Add food</h1></button>
 
 </body>
 </html>

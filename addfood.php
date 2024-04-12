@@ -30,7 +30,7 @@ $conn->close();
 <html>
 
 <head>
-    <title>add restaurant</title>
+    <title>Upload Image</title>
 </head>
 
 <body>
