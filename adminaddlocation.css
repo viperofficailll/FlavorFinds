@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('testbg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #4d2d52; /* Deep purple */
+    font-family: 'Garamond', serif; /* Fancy serif font */
+    font-size: 36px; /* Larger font size */
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+}
+
+input[type="text"],
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #e33d3d;
+  
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #de7878;
+}

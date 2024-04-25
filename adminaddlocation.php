@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Recommended Food Form</title>
+    <link rel="stylesheet" href="adminaddlocation.css">
 </head>
 <body>
 
@@ -54,6 +55,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close connection
 $conn->close();
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 </body>
 </html>

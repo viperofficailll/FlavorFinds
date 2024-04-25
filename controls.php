@@ -1,24 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Premium Design</title>
+    <link rel="stylesheet" href="controls.css">
 </head>
 <body>
-<button class="RATING REVIEWS" type="submit" onclick="window.location.href = 'adminreviews.php'">
-    <h1> RATING AND REVIEW</h1>
-    <button class="Restaurantinfo" type="submit" onclick="window.location.href = 'adminrestaurant.php'">
-    <h1> Restauransts info</h1>
-    
-</button>
-<button class="Restaurantadd" type="submit" onclick="window.location.href = 'addrestaurant.php'">
-    <h1> add restaurant</h1></button>
-<button class="addlocation" type="submit" onclick="window.location.href = 'adminaddlocation.php'">
-    <h1> Add Location</h1></button>
-<button class="addfood" type="submit" onclick="window.location.href = 'addfood.php'">
-    <h1> Add food</h1></button>
 
+<nav>
+    <span>FlavorFinds</span>
+    <p>'Your Guide to Ultimate Flavour'</p>
+</nav>
+
+
+<h1><span>Select any Options Below:-</span></h1>
+
+<button onclick="window.location.href = 'adminreviews.php'">Rating and Reviews</button>
+<button onclick="window.location.href = 'adminrestaurant.php'">Restaurant Info</button>
+<button onclick="window.location.href = 'addrestaurant.php'">Add Restaurant</button>
+<button onclick="window.location.href = 'adminaddlocation.php'">Add Location</button>
+<button onclick="window.location.href = 'addfood.php'">Add Food</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
+
 </html>

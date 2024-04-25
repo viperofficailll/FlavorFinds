@@ -41,9 +41,9 @@ if (isset($_GET['id'])) {
         // image lai k garni??????
         // $ratings = $row['ratings'];
         // Display restaurant details
-        echo "<h1>Restaurant Details</h1>";
-        echo "<p>Restaurant Name:  <h2>$restaurantName</p></h2>   ";
-        echo "<p>Restaurant location: <h2>$restaurantlocation</h2>     </p>";
+        
+        echo "<p>  <h1>$restaurantName</p></h1>   ";
+        echo "<p> <h2>$restaurantlocation</h2>     </p>";
         echo"<p> Food for which this restaurant is recommended: <h4>$currentfood </h4>     ";
         // Add more details as needed
        }
@@ -60,7 +60,7 @@ $review_result = $conn->query($review_sql);
 
 echo '<h1>Previous Reviews and Ratings</h1>';
 echo'<table>';
-echo '<tr> <th>Rating</th> <th>review</th> <th>email</th> </tr>';
+echo '<tr> <th>Rating</th> <th>Review</th> <th>Email</th> </tr>';
 
 if ($review_result->num_rows > 0) {
     // Display each review and rating
@@ -78,7 +78,7 @@ if ($review_result->num_rows > 0) {
 }
 
 
-echo'<h1>Ratings</h1>';
+echo'<h1>Rating</h1>';
 // ratings section
 
 $mql = "SELECT * FROM `searchfood` WHERE `restaurantid`=$restaurantid"; 
@@ -86,12 +86,12 @@ $result1 = $conn->query($mql);
 if ($result1->num_rows > 0) {
     $row1= $result1->fetch_assoc();
     $restaurantrating = $row1['ratings'];
-    echo "<p>Restaurant rating:  <h4>$restaurantrating</p></h4>   ";
-    echo'<h1>visited this restaurant ??? rate it and give us a review .</h1>';
+    echo "<p>  <h4>$restaurantrating</p></h4>   ";
+    echo'<h1>Visited this Restaurant ??? Rate it and Give us a Review .</h1>';
     ?>
     <!-- User Button -->
     <!-- <button class="ratingsandreviews" onclick="location.href='ratingsandreviews.php'"><h1> RATING AND REVIEW</h1></button> -->
-    <button class="ratingsandreviews" onclick="location.href='ratingsandreviews.php?id=<?php echo $restaurantid; ?>'"><h1> RATING AND REVIEW</h1></button>
+    <button class="ratingsandreviews" onclick="location.href='ratingsandreviews.php?id=<?php echo $restaurantid; ?>'"><h1> RATE IT !!!</h1></button>
 
     <?php
 
@@ -99,7 +99,13 @@ if ($result1->num_rows > 0) {
 
 $conn->close();
     ?>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 </body>
 </html>
-
-

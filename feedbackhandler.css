@@ -1,0 +1,32 @@
+h2 {
+    color: #4d2d52; /* Deep purple */
+    font-family: 'Garamond', serif; /* Fancy serif font */
+    font-size: 36px; /* Larger font size */
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: underline;
+}
+
+a {
+    font-size: 24px; /* Larger font size for the link */
+    color: #4085f3; /* Dark purple */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; /* Make the link a block element to center it */
+    margin-top: 20px; /* Add some spacing between the heading and the link */
+    text-align: center;
+}
+
+a:hover {
+    color: #ea503c; /* Darker shade of purple on hover */
+}
+h3{
+    text-align: center;
+}
+body{
+    background-image: url('testbg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

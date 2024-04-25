@@ -1,0 +1,56 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    background-image: url('signupbg.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: linear-gradient(to right, #4CAF50, #c71212);
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav span {
+    font-size: 50px;
+}
+
+nav p {
+    font-size: 20px;
+    margin-top: 5px;
+    
+}
+
+button {
+    background-color: #6b3f7e; /* Dark purple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #87549b; /* Darker shade of purple on hover */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #4d2d52;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: #ffac4c; /* Accent color */
+}

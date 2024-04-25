@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    background-image: url('testbg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #4d2d52; /* Deep purple */
+    font-family: 'Garamond', serif; /* Fancy serif font */
+    font-size: 20px; /* Larger font size */
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: underline;
+}
+h3 {
+    color: #4d2d52; /* Deep purple */
+    font-family: 'Garamond', serif; /* Fancy serif font */
+    font-size: 36px; /* Larger font size */
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    text-transform: uppercase; /* Uppercase text */
+   
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif; /* Premium font */
+    font-size: 24px;
+    color: #4d2d52; /* Deep purple */
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #e33d3d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #d44646;
+}

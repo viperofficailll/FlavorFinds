@@ -33,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Insert the new review into the database
             $insertSql = "INSERT INTO reviews (id, ratings, review,email) VALUES ($restaurantid, $rating, '$review','$email')";
             if ($conn->query($insertSql) === TRUE) {
-                echo "Review submitted successfully";?>
+                echo "<h3>Review submitted successfully</h3>";?>
                  <h2>Thank you for your time</h2>
                 
-                <a href="first.html">back to home??</a>
+                <a href="first.html">Back to Home?</a>
                 <?php
             } else {
                 echo "Error inserting review: " . $conn->error;
@@ -51,4 +51,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If the request method is not POST, redirect the user
     header("Location: login.php");
     exit();
-}
+}?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="feedbackhandler.css">
+</head>
+<body>
+    
+</body>
+</html>

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
+    <link rel="stylesheet" href="admin1.css">
 </head>
 <body>
-    <h2></h2>
-    enter username and password for login
+    <h1>Admin??</h1>
+    
     <div class="login-container">
         <form id="loginForm" action="admin1.php" method="post">
-            <input type="text" id="username" name="username" placeholder="enter username" required>
-            <input type="password" id="password" name="passwd" placeholder="enter password" required>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="passwd" placeholder="Password" required>
             <button type="submit" name="submit" value="submit">Login</button>
         </form>
     </div>
@@ -36,5 +37,6 @@
         }
     }
     ?>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

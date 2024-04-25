@@ -14,7 +14,6 @@ body {
   nav {
     background: linear-gradient(to right, #4CAF50, #c71212);
     overflow: hidden;
-    
     padding-top: 5px;
     padding-bottom: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);

@@ -13,8 +13,8 @@
         <h1 class="animated fadeInDown hover-effect">FlavorFinds</h1>
         <nav>
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
                 <li><a href="signout.php">Sign Out</a></li>
             </ul>
         </nav>
@@ -26,20 +26,33 @@
         <form action="home2.php" method="post">
             <input type="text" name="food" placeholder="Search Food Here" id="food" required>
             <br>
-            <h1> Select the desired Cost Range!!</h1>
-            Less than RS.1000<input type="radio" name="cost1" value="below 1000" required><br>
-            More than RS.1000<input type="radio" name="cost1" value="above 1000" required><br>
-            <h1> Select what type of Food do you want?</h1>
-            Buff<input type="radio" name="variety" value="buff" required><br>
-            Chicken<input type="radio" name="variety" value="chicken" required><br>
-            Veg<input type="radio" name="variety" value="veg" required><br>
-            <input type="submit" name="search" value="search food" />
+            <div class="food-cost-section">
+                <h1>Select your desired Cost Range ! </h1>
+                <label for="below-1000">Less than Rs.1000</label>
+                <input type="radio" name="cost1" id="below-1000" value="below 1000" required>
+                <br>
+                <label for="above-1000">More than Rs.1000</label>
+                <input type="radio" name="cost1" id="above-1000" value="above 1000" required>
+            </div>
+            <div class="which-food-section">
+                <h1> Which type of Food do you want ?</h1>
+                <label for="buff">Buff</label>
+                <input type="radio" name="variety" id="buff" value="Buff" required>
+                <br>
+                <label for="chicken">Chicken</label>
+                <input type="radio" name="variety" id="chicken" value="Chicken" required>
+                <br>
+                <label for="veg">Veg</label>
+                <input type="radio" name="variety" id="veg" value="Veg" required>
+            </div>
+            <input type="submit" name="search" value="Search" />
         </form>
     </div>
+    
 
     <!-- Recommended Food -->
     <div class="recommendedfood">
-        recommended food for this location
+        Recommended Foods
         <?php
         session_start(); // Start the session
 
@@ -93,6 +106,13 @@
         }
         ?>
     </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 </body>
 

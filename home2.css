@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.search-bar {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+}
+
+.search-bar form {
+    text-align: center;
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="radio"],
+.search-bar input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.recommendedfood {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-button {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-button:hover {
+    background-color: #45a049;
+}

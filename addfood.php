@@ -33,10 +33,11 @@ $conn->close();
 
 <head>
     <title>add food</title>
+    <link rel="stylesheet" href="addfood.css">
 </head>
 
 <body>
-    <h2>add food</h2>
+    <h2>Add Food</h2>
     <form action="addfood.php" method="post" enctype="multipart/form-data">
         <label for="foodname">Food Name:</label><br>
         <input type="text" id="foodname" name="foodname" required><br><br>
@@ -67,7 +68,7 @@ $conn->close();
 
 
         <input type="file" id="image" name="image" required>
-        <input type="submit" value="submit" name="submit">
+        <input type="submit" value="Submit" name="submit">
     </form>
 </body>
 
