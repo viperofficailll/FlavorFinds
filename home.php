@@ -24,15 +24,15 @@
 
     <div class="search-bar">
         <form action="home2.php" method="post">
-            <input type="text" name="food" placeholder="search for food" id="food" required>
+            <input type="text" name="food" placeholder="Search Food Here" id="food" required>
             <br>
-            <h1> food cost</h1>
-            below 1000<input type="radio" name="cost1" value="below 1000" required><br>
-            above 1000<input type="radio" name="cost1" value="above 1000" required><br>
-            <h1> food specialization</h1>
-            buff<input type="radio" name="variety" value="buff" required><br>
-            chicken<input type="radio" name="variety" value="chicken" required><br>
-            veg<input type="radio" name="variety" value="veg" required><br>
+            <h1> Select the desired Cost Range!!</h1>
+            Less than RS.1000<input type="radio" name="cost1" value="below 1000" required><br>
+            More than RS.1000<input type="radio" name="cost1" value="above 1000" required><br>
+            <h1> Select what type of Food do you want?</h1>
+            Buff<input type="radio" name="variety" value="buff" required><br>
+            Chicken<input type="radio" name="variety" value="chicken" required><br>
+            Veg<input type="radio" name="variety" value="veg" required><br>
             <input type="submit" name="search" value="search food" />
         </form>
     </div>

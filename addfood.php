@@ -16,15 +16,14 @@ if (isset($_POST["submit"])) {
     $sql = "INSERT INTO `searchfood`(`foodname`, `price`, `variety`, `restaurantid`, `restaurant`, `ratings`, `IMAGE`, `location`, `num_reviews`) 
                 VALUES ('$foodname','$price','$variety','$restaurantid','$restaurant','$ratings','$imageData','$location','$num_reviews')";
     $statement = $conn->prepare($sql);
-    $statement->bind_param("sssssssss", $foodname, $price, $variety, $restaurantid, $restaurant, $ratings, $location, $num_reviews);
-        if ($statement->execute()) {
-            echo "Image uploaded successfully";
-        } else {
-            echo "Error uploading image: " . $conn->error;
-        }
+    $statement->bind_param("ssssssss", $foodname, $price, $variety, $restaurantid, $restaurant, $ratings, $location, $num_reviews);
+    if ($statement->execute()) {
+        echo "Image uploaded successfully";
     } else {
-        echo "Error preparing SQL statement: " . $conn->error;
+        echo "Error uploading image: " . $conn->error;
     }
+} 
+
 
 
 $conn->close();
@@ -39,34 +38,34 @@ $conn->close();
 <body>
     <h2>add food</h2>
     <form action="addfood.php" method="post" enctype="multipart/form-data">
-    <label for="foodname">Food Name:</label><br>
+        <label for="foodname">Food Name:</label><br>
         <input type="text" id="foodname" name="foodname" required><br><br>
-        
+
         <label for="price">Price:</label><br>
         <input type="text" id="price" name="price" required><br><br>
-        
+
         <label for="variety">Variety:</label><br>
         <input type="text" id="variety" name="variety" required><br><br>
-        
+
         <label for="restaurantid">Restaurant ID:</label><br>
         <input type="text" id="restaurantid" name="restaurantid" required><br><br>
-        
+
         <label for="restaurant">Restaurant Name:</label><br>
         <input type="text" id="restaurant" name="restaurant" required><br><br>
-        
+
         <label for="ratings">Ratings:</label><br>
         <input type="text" id="ratings" name="ratings" required><br><br>
-        
-        
-        
+
+
+
         <label for="location">Location:</label><br>
         <input type="text" id="location" name="location" placeholder="city" required><br><br>
-        
+
         <label for="num_reviews">Number of Reviews:</label><br>
         <input type="text" id="num_reviews" name="num_reviews" required><br><br>
-        
 
-        
+
+
         <input type="file" id="image" name="image" required>
         <input type="submit" value="submit" name="submit">
     </form>

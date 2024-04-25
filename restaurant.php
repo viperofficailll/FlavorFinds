@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>restaurant details</title>
+    <link rel="stylesheet" href="restaurant.css">
 </head>
 <body>
 <?php
@@ -58,16 +59,20 @@ $review_sql = "SELECT * FROM `reviews` WHERE `id` = $restaurantid";
 $review_result = $conn->query($review_sql);
 
 echo '<h1>Previous Reviews and Ratings</h1>';
+echo'<table>';
+echo '<tr> <th>Rating</th> <th>review</th> <th>email</th> </tr>';
+
 if ($review_result->num_rows > 0) {
     // Display each review and rating
     while ($review_row = $review_result->fetch_assoc()) {
         $rating = $review_row['ratings'];
         $review = $review_row['review'];
         $email = $review_row['email'];
-        echo "<p><strong>Rating:</strong> $rating</p>";
-        echo "<p><strong>Review:</strong> $review</p>";
-        echo "<p><strong>reviewer:</strong> $email</p>";
+        
+            echo "<tr><td>$rating</td><td>$review</td><td>$email</td></tr>";
+        
     }
+    echo "</table>";
 } else {
     echo "<p>No previous data available.</p>";
 }

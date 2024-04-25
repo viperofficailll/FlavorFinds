@@ -1,109 +1,165 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, ul, li, form, input, button {
-    background-color: black ;
-    color: white;
+/* Header */
+.header {
+    background: linear-gradient(to right, #4CAF50, #c71212);
+      color: #fff; /* White text color */
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Logo */
+    .header h1 {
+      margin: 0; /* Remove default margin */
+    }
+    
+    /* Navigation */
+    nav ul {
+      list-style-type: none; /* Remove default bullet points */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+    
+    nav ul li {
+      display: inline; /* Display list items horizontally */
+      margin-right: 20px; /* Add spacing between list items */
+    }
+    
+    nav ul li:last-child {
+      margin-right: 0; /* Remove margin for the last list item */
+    }
+    
+    nav ul li a {
+      color: #fff; /* White text color for links */
+      text-decoration: none; /* Remove underline from links */
+    }
+    
+    nav ul li a:hover {
+      text-decoration: underline; /* Underline links on hover */
+    }
+    
+    /* Search Container */
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+    
+  
+    
+    /* Search Button */
+    .search-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+    .search-button:hover {
+      background-color: #45a049; /* Darker Green */
+    }
+    /* Search bar container */
+  .search-bar {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    /* Text input */
+    .search-bar input[type="text"] {
+      width: 500px;
+      padding: 10px;
+      border: 3px solid #005d20;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    
+    /* Radio buttons */
+    .search-bar input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    /* Labels for radio buttons */
+    .search-bar h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    /* Submit button */
+    .search-bar input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Submit button hover effect */
+    .search-bar input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Food cost section */
+    .search-bar .food-cost-section {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    /* Which Food section */
+    .search-bar .which-food-section {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  /* Recommended food container */
+  .recommendedfood {
+      background-color: #f2f2f2; /* Light grey background color */
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    /* Table styling */
+    .recommendedfood table {
+      width: 100%;
+    }
+    
+    .recommendedfood table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Add a bottom border to separate rows */
+    }
+    
+    .recommendedfood table td:first-child {
+      font-weight: bold; /* Make the first column bold */
+    }
+  /* User Button */
+  .user-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .user-button:hover {
+      background-color: #45a049; /* Darker Green */
+    }
+        body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/* Set default font */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Header styles */
-.header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Navigation styles */
-.nav {
-    text-align: center;
-    background-color: #333;
-    padding: 10px 0;
-}
-
-.nav ul {
-    list-style-type: none;
-}
-
-.nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Search bar styles */
-.search-bar {
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar input[type="text"] {
-    width: 100%;
-    background-color: green;
-    padding: 8px;
-    color: white;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-.search-bar h1 {
-    margin-bottom: 5px;
-}
-/* Search button styles */
-.search-bar input[type="submit"] {
-    padding: 12px 24px; /* Increase padding for larger button */
-    font-size: 16px; 
-    background-color: green;/* Increase font size */
-}
-
-.search-bar input[type="radio"] {
-    margin-bottom: 5px;
-}
-
-/* Recommended food styles */
-.recommendedfood {
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    padding: 10px;
-    background-color: rgb(5, 4, 4);
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.recommendedfood table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.recommendedfood table td {
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* User button styles */
-.user-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
+    background-color: #f2f2f2;
+    background-image: url('testbg.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+    
