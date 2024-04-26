@@ -42,6 +42,9 @@
                 <label for="chicken">Chicken</label>
                 <input type="radio" name="variety" id="chicken" value="Chicken" required>
                 <br>
+                <label for="Pork">Pork</label>
+                <input type="radio" name="variety" id="Pork" value="Pork" required>
+                <br>
                 <label for="veg">Veg</label>
                 <input type="radio" name="variety" id="veg" value="Veg" required>
             </div>
@@ -73,19 +76,19 @@
             echo "<table>";
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>" . $row["foodname1"] . "</td>";
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . $row["foodname2"] . "</td>";
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . $row["foodname3"] . "</td>";
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . $row["foodname4"] . "</td>";
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . $row["foodname5"] . "</td>";
+                echo "<td><img src='images/" . $row['foodname1'] . "'></td>";
+                
+              
+                echo "<td><img src='images/" . $row['foodname2'] . "'></td>";
+                
+                
+                echo "<td><img src='images/" . $row['foodname3'] . "'></td>";
+                
+                
+                echo "<td><img src='images/" . $row['foodname4'] . "'></td>";
+                
+                
+                echo "<td><img src='images/" . $row['foodname5'] . "'></td>";
                 echo "</tr>";
             }
             echo "</table>";

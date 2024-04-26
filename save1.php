@@ -20,7 +20,8 @@ $passwd = $_POST['password'];// Hash the password
 $email = $_POST['email'];
 $age = $_POST['age'];
 $number = $_POST['number'];
-$location = $_POST['location'];
+$Location = $_POST['location'];
+$location = strtolower($Location);
 
 // Check if the email is already taken
 $email_check_query = "SELECT * FROM `userdata` WHERE `email`='$email' LIMIT 1";

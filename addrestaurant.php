@@ -1,67 +1,49 @@
 <?php
 include 'db_conn.php';
 
-if (isset($_POST["submit"])) {
-    $restaurantname = $_POST["restaurantname"];
-    $foodItserves = $_POST["foodItserves"];
-    $restaurantlocation = $_POST["restaurantlocation"];
+if (isset($_POST['submit'])) {
+    $file_name = $_FILES['image']['name'];
+    $tempname = $_FILES['image']['tmp_name'];
+    $folder = 'images/' . $file_name;
+    
+    $restaurantname = $_POST['value2'];
+    $foodItServes = $_POST['value3'];
+    $restaurantlocation = $_POST['value4'];
 
-    $imageData = base64_encode(file_get_contents($_FILES["image"]["tmp_name"]));
-
-    $sql = "INSERT INTO `restaurant` (restaurantname, foodItserves, restaurantlocation, restarantimage) VALUES (?, ?, ?, ?)";
-    $statement = $conn->prepare($sql);
-
-    if ($statement) {
-        $statement->bind_param("ssss", $restaurantname, $foodItserves, $restaurantlocation, $imageData);
-
-        if ($statement->execute()) {
-            echo "Image uploaded successfully";
+    if (move_uploaded_file($tempname, $folder)) {
+        $insert_query = mysqli_query($conn, "INSERT INTO `restaurant`( `restaurantname`, `foodItServes`, `restaurantlocation`, `restarantimage`)
+        VALUES ('$restaurantname', '$foodItServes', '$restaurantlocation', '$file_name')");
+        
+        if ($insert_query) {
+            echo "Data inserted successfully";
         } else {
-            echo "Error uploading image: " . $conn->error;
+            echo "Data insertion failed";
         }
     } else {
-        echo "Error preparing SQL statement: " . $conn->error;
+        echo "File upload failed";
     }
 }
-
-$conn->close();
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>add restaurant</title>
-    <link rel="stylesheet" href="addrestaurant.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-    <h2>Add Restaurant's Info</h2>
-    <form action="addrestaurant.php" method="post" enctype="multipart/form-data">
-
-        <input type="text" id="name" name="restaurantname" placeholder="Restaurant Name" required>
-        <input type="text" id="food" name="foodItserves" placeholder="Served Food" required>
-        <input type="text" id="location" name="restaurantlocation" placeholder="Restaurant's Location (not city)" required>
-        <input type="file" id="image" name="image" required>
-        <input type="submit" value="Upload Image" name="submit">
+    <form action="" method="post" enctype="multipart/form-data">
+        choose restaurant image :<input type="file" name="image"></input>
+        
+        <input type="text" name="value2" placeholder="enter restaurant name" >
+        <input type="text" name="value3" placeholder="enter food it serves" >
+        <input type="text" name="value4" placeholder="enter restaurant location" >
+        
+        <input type="submit" name="submit" value="Submit"></input>
     </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
 </body>
 

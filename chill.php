@@ -6,7 +6,9 @@ session_start(); // Start the session
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $passwd = $_POST['passwd'];
-    $location = $_POST['location'];
+
+    $Location = $_POST['location'];
+    $location =  strtolower($Location);
 
     $query = "SELECT * FROM userdata WHERE email = '$email' AND passwd = '$passwd'";
     $data = mysqli_query($conn, $query);

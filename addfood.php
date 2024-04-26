@@ -1,75 +1,67 @@
 <?php
 include 'db_conn.php';
 
-if (isset($_POST["submit"])) {
-    $foodname = $_POST['foodname'];
-    $price = $_POST['price'];
-    $variety = $_POST['variety'];
-    $restaurantid = $_POST['restaurantid'];
-    $restaurant = $_POST['restaurant'];
-    $ratings = $_POST['ratings'];
-    $location = $_POST['location'];
-    $num_reviews = $_POST['num_reviews'];
-
-    $imageData = base64_encode(file_get_contents($_FILES["image"]["tmp_name"]));
-
-    $sql = "INSERT INTO `searchfood`(`foodname`, `price`, `variety`, `restaurantid`, `restaurant`, `ratings`, `IMAGE`, `location`, `num_reviews`) 
-                VALUES ('$foodname','$price','$variety','$restaurantid','$restaurant','$ratings','$imageData','$location','$num_reviews')";
-    $statement = $conn->prepare($sql);
-    $statement->bind_param("ssssssss", $foodname, $price, $variety, $restaurantid, $restaurant, $ratings, $location, $num_reviews);
-    if ($statement->execute()) {
-        echo "Image uploaded successfully";
+if (isset($_POST['submit'])) {
+    $file_name = $_FILES['image']['name'];
+    $tempname = $_FILES['image']['tmp_name'];
+    $folder = 'images/' . $file_name;
+    
+    if (move_uploaded_file($tempname, $folder)) {
+        echo ("File uploaded successfully");
     } else {
-        echo "Error uploading image: " . $conn->error;
+        echo ("File upload failed");
     }
-} 
-
-
-
-$conn->close();
+    $name =$_POST['value1'];
+    $price =$_POST['value2'];
+    $variety =$_POST['value3'];
+    $id =$_POST['value4'];
+    $resname =$_POST['value5'];
+    $location =$_POST['value6'];
+    $numReviews =$_POST['value7'];
+    $ratings=$_POST['value8'];
+  
+    $insert_query = "INSERT INTO `searchfood`(`foodname`, `price`, `variety`, `restaurantid`, `restaurant`, `ratings`, `IMAGE`, `location`, `num_reviews`)
+    VALUES ('$name','$price','$variety','$id','$resname','$ratings','$file_name','$location','$numReviews')";
+    // Execute the insert query
+    mysqli_query($conn, $insert_query);
+}
 ?>
+
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>add food</title>
-    <link rel="stylesheet" href="addfood.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <h2>Add Food</h2>
-    <form action="addfood.php" method="post" enctype="multipart/form-data">
-        <label for="foodname">Food Name:</label><br>
-        <input type="text" id="foodname" name="foodname" required><br><br>
+    <form action="" method="post" enctype="multipart/form-data">
+       
 
-        <label for="price">Price:</label><br>
-        <input type="text" id="price" name="price" required><br><br>
+        <input type="text" name="value1" placeholder="enter food name" >
+        <input type="text" name="value2" placeholder="enter food price" >
+        <input type="text" name="value3" placeholder="enter variety" >
+        <input type="text" name="value4" placeholder="enter restauramt id" >
+        <input type="text" name="value5" placeholder="enter restaurant name" >
+        <input type="text" name="value8" placeholder="enter restaurant rating" >
+        
+        <input type="text" name="value6" placeholder="enter location" >
+        <input type="text" name="value7" placeholder="enter number of reviews" >
+         choose food image :<input type="file" name="image"></input>
 
-        <label for="variety">Variety:</label><br>
-        <input type="text" id="variety" name="variety" required><br><br>
-
-        <label for="restaurantid">Restaurant ID:</label><br>
-        <input type="text" id="restaurantid" name="restaurantid" required><br><br>
-
-        <label for="restaurant">Restaurant Name:</label><br>
-        <input type="text" id="restaurant" name="restaurant" required><br><br>
-
-        <label for="ratings">Ratings:</label><br>
-        <input type="text" id="ratings" name="ratings" required><br><br>
-
-
-
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location" placeholder="city" required><br><br>
-
-        <label for="num_reviews">Number of Reviews:</label><br>
-        <input type="text" id="num_reviews" name="num_reviews" required><br><br>
-
-
-
-        <input type="file" id="image" name="image" required>
-        <input type="submit" value="Submit" name="submit">
+        
+        <input type="submit" name="submit" value="Submit"></input>
     </form>
+    <div>
+        <?php
+        // $res = mysqli_query($conn, "SELECT * FROM images");
+        // while ($row = mysqli_fetch_array($res)) {
+        // ?>
+        //     <img src="images/<?php echo $row['file']; ?>">   
+        // <?php
+        // }
+        ?>
+    </div>
 </body>
-
 </html>

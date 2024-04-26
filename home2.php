@@ -58,7 +58,8 @@
         // Use prepared statements to prevent SQL injection
         $sql = "SELECT * FROM `searchfood` WHERE foodname = ? AND price = ? AND variety = ? AND location = ? ORDER BY `ratings` DESC";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $FoodName, $FoodCost, $FoodVariety, $location);
+        $foodName = strtolower($FoodName); 
+        $stmt->bind_param("ssss", $foodName, $FoodCost, $FoodVariety, $location);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -67,8 +68,7 @@
 
             while ($row = $result->fetch_assoc()) {
                 $restaurantName = urlencode($row["restaurantid"]); // Encode the restaurant id for use in the URL
-                echo '<tr><td>' . $row["restaurantid"] . '</td><td><a href="restaurant.php?id=' . $restaurantName . '">' . $row["restaurant"] . '</a></td><td>'
-                    . $row["ratings"] . '</td><td><img src="data:image/jpeg;base64,' . base64_encode($row["IMAGE"]) . '"></td></tr>';
+                echo '<tr><td>' . $row["restaurantid"] . '</td><td><a href="restaurant.php?id=' . $restaurantName . '">' . $row["restaurant"] . '</a></td><td>' . $row["ratings"] . "</td><td><img src='images/" . $row['IMAGE'] . "'></td></tr>";
             }
             echo "</table>";
         } else {
