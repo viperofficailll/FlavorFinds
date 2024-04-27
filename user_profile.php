@@ -20,6 +20,7 @@ $location = $_SESSION['location'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile.css"> <!-- Add a stylesheet if needed -->
     <title>User Profile</title>
+    <link rel="stylesheet" href="userprofile.css">
 </head>
 
 <body>
@@ -31,6 +32,35 @@ $location = $_SESSION['location'];
     </div>
     
     <a href="home.php">Go back to home</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 
 </html>

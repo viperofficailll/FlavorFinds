@@ -43,8 +43,10 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="adminaddlocation.css">
 </head>
 <body>
+    <h2>Insert Images Here </h2>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="text" name="location" placeholder="Enter location">
         <br><br>
@@ -65,5 +67,18 @@ if (isset($_POST['submit'])) {
         <br><br>
         <input type="submit" name="submit" value="Submit">
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 </body>
 </html>

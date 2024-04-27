@@ -19,7 +19,7 @@
 <button onclick="window.location.href = 'adminreviews.php'">Rating and Reviews</button>
 <button onclick="window.location.href = 'adminrestaurant.php'">Restaurant Info</button>
 <button onclick="window.location.href = 'addrestaurant.php'">Add Restaurant</button>
-<button onclick="window.location.href = 'adminaddlocation.php'">Add Location</button>
+<button onclick="window.location.href = 'adminaddlocation.php'">Recommend Food </button>
 <button onclick="window.location.href = 'addfood.php'">Add Food</button>
 
 <br>

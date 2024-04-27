@@ -32,18 +32,42 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="addrestaurant.css">
 </head>
 
 <body>
+    <h2>
+        Enter Restaurant's Details:
+    </h2>
     <form action="" method="post" enctype="multipart/form-data">
-        choose restaurant image :<input type="file" name="image"></input>
+        Choose Restaurant's Image :<input type="file" name="image"></input>
         
-        <input type="text" name="value2" placeholder="enter restaurant name" >
-        <input type="text" name="value3" placeholder="enter food it serves" >
-        <input type="text" name="value4" placeholder="enter restaurant location" >
+        <input type="text" name="value2" placeholder="Enter Restaurant's Name" >
+        <input type="text" name="value3" placeholder="Enter Food it Serves" >
+        <input type="text" name="value4" placeholder="Enter Restaurant's Location" >
         
         <input type="submit" name="submit" value="Submit"></input>
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
 </body>
 

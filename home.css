@@ -117,28 +117,37 @@
   }
 /* Recommended food container */
 .recommendedfood {
-    
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    color: #4d2d52; /* Deep purple */
-    font-family: 'Garamond', serif; /* Fancy serif font */
-    font-size: 30px;
-  }
-  
-  /* Table styling */
-  .recommendedfood table {
-    width: 100%;
-  }
-  
-  .recommendedfood table td {
-    padding: 10px;
-    
-  }
-  
-  .recommendedfood table td:first-child {
-    font-weight: bold; /* Make the first column bold */
-  }
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #4d2d52; /* Deep purple */
+  font-family: 'Garamond', serif; /* Fancy serif font */
+  font-size: 30px;
+}
+
+/* Table styling */
+.recommendedfood table {
+  width: 100%;
+  border-spacing: 0; /* Remove spacing between table cells */
+  border-collapse: collapse; /* Collapse borders between cells */
+}
+
+.recommendedfood table td {
+  padding: 0; /* Remove padding to eliminate space */
+}
+
+.recommendedfood table td:first-child {
+  font-weight: bold; /* Make the first column bold */
+}
+
+/* Adjust size of images */
+.recommendedfood table img {
+  width: 300px; /* Set width of images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
 /* User Button */
 .user-button {
     background-color: #4CAF50; /* Green */
@@ -151,6 +160,9 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    position: absolute;
+    top: 85px;
+    left: 1380px;
   }
   
   .user-button:hover {

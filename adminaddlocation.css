@@ -1,52 +1,69 @@
+/* Body */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('testbg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-image: url('testbg.jpg'); /* Add background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 50px;
-    color: #4d2d52; /* Deep purple */
-    font-family: 'Garamond', serif; /* Fancy serif font */
-    font-size: 36px; /* Larger font size */
-    text-align: center;
-    margin-top: 50px; /* Adjust as needed */
-    text-transform: uppercase; /* Uppercase text */
-}
-
+/* Form container */
 form {
-    width: 300px;
-    margin: 0 auto;
+    width: 40%;
+    margin: 100px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    background-color: #f9f9f9;
 }
 
-input[type="text"],
+/* Text inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* File inputs */
+input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Submit button */
 input[type="submit"] {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #e64f4f;
+    color: white;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
 }
 
-input[type="submit"] {
-    background-color: #e33d3d;
-  
-    color: white;
-    border: none;
-    cursor: pointer;
+input[type="submit"]:hover {
+    background-color: #f31e1e;
 }
 
-input[type="submit"]:hover {
-    background-color: #de7878;
+/* Error messages */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+h2{
+    color: #4d2d52;
+    font-family: 'Garamond', serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 80px;
+    text-transform: uppercase;
+    text-decoration: underline;
 }

@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul class="navbar">
-            <li><a href="home.html">Home</a></li>
+            
             <li><a href="aboutus.html">About Us</a></li>
            
             <li><a href="contactus.html">Contact Us</a></li>

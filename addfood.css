@@ -1,59 +1,70 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('testbg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-image: url('testbg.jpg'); /* Add background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
 
-h2 {
-    text-align: center;
-
-    margin-top: 50px;
-    color: #4d2d52; /* Deep purple */
-    font-family: 'Garamond', serif; /* Fancy serif font */
-    font-size: 36px; /* Larger font size */
-    text-align: center;
-    margin-top: 50px; /* Adjust as needed */
-    text-transform: uppercase; /* Uppercase text */
-    text-decoration: underline;
 }
 
 form {
-    width: 400px;
-    height: auto;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="file"],
-input[type="submit"] {
+input[type="text"], input[type="file"] {
     width: calc(100% - 20px);
-    margin-bottom: 10px;
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+    border-color: #007bff;
 }
 
 input[type="submit"] {
-    background-color: #d92c2c;
-    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ef1414;
+    color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #e96f6f;
+    background-color: #ea5656;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.success-message {
+    color: #008000;
+    margin-top: 5px;
+    text-align: center;
+}
+h2{
+    color: #4d2d52;
+    font-family: 'Garamond', serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    text-decoration: underline;
 }

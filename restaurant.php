@@ -41,10 +41,11 @@ if (isset($_GET['id'])) {
         // image lai k garni??????
         // $ratings = $row['ratings'];
         // Display restaurant details
-        
+       $restaurantLocation=  strtoupper($restaurantlocation);
         echo "<p>  <h1>$restaurantName</p></h1>   ";
-        echo "<p> <h2>$restaurantlocation</h2>     </p>";
-        echo"<p> Food for which this restaurant is recommended: <h4>$currentfood </h4>     ";
+        echo "<p> <h2>$restaurantLocation</h2>     </p>";
+        $currentFood= strtoupper($currentfood);
+        echo"<p> Food for which this restaurant is recommended: <h4>$currentFood </h4>     ";
         // Add more details as needed
        }
     } else {
@@ -99,6 +100,12 @@ if ($result1->num_rows > 0) {
 
 $conn->close();
     ?>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
