@@ -16,10 +16,10 @@ FlavorFinds is a web application designed to help users discover and explore new
 ### Homepage
 ![Homepage](screenshots/homepage.png)
 
-### Recipe Search
+### First page
 ![first page ](screenshots/firstpage.png)
 
-### Recipe Details
+### Reviews
 ![Reviews](screenshots/reviews.png)
 
 
